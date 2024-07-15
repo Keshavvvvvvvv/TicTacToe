@@ -51,10 +51,17 @@ nav {
 .gameInfo {
     padding: 0 34px;
     font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 1.2rem;
 }
 
-.imgBox {
-    display: none;
+.gameInfo h1 {
+    font-size: 2.5rem;
+}
+
+.imgBox img{
+    width: 0;
+    opacity: 0;
+    transition: width 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .bt-0 {
@@ -68,4 +75,34 @@ nav {
 }
 .bb-0 {
     border-bottom: 0;
+}
+
+#reset {
+    margin: 6px 20px;
+    padding: 4px 14px;
+    background-color: aliceblue;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Playwrite DE Grund';
+    font-weight: 600;
+}
+
+@media screen and (max-width: 970px){
+    .gameCont{
+        flex-wrap: wrap;
+    }
+    .boxText {
+        font-weight: 600;
+    }
+    .gameInfo {
+        margin-top: 34px;
+        text-align: center;
+    }
+    .gameInfo h1 {
+        font-size: 1.5rem;
+    }
+    .cont {
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
 }
